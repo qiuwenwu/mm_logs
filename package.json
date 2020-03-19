@@ -1,5 +1,5 @@
 {
-  "name": "mm_log",
+  "name": "mm_logs",
   "version": "1.0.0",
   "description": "这是超级美眉调试输出日志模块，用于规范输出调试结果和打印日志",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qiuwenwu/mm_log.git"
+    "url": "git+https://github.com/qiuwenwu/mm_logs.git"
   },
   "keywords": [
     "mylog",
@@ -26,9 +26,9 @@
   "author": "邱文武",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/qiuwenwu/mm_log/issues"
+    "url": "https://github.com/qiuwenwu/mm_logs/issues"
   },
-  "homepage": "https://github.com/qiuwenwu/mm_log#readme",
+  "homepage": "https://github.com/qiuwenwu/mm_logs#readme",
   "dependencies": {
     "colors": "^1.4.0",
     "log4js": "^6.1.2",
