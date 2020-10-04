@@ -28,18 +28,19 @@ log4js.configure({
 		// http请求日志  http请求日志需要app.use引用一下， 这样才会自动记录每次的请求信息 
 		httpLog: {
 			type: "dateFile",
-			filename: "./log/http.log".fullname(),
-			pattern: ".yyyy-MM-dd",
+			filename: "./log/http".fullname(),
+			alwaysIncludePattern: true,
+			pattern: "yyyy-MM-dd-hh.log",
 			keepFileExt: true
 		},
 		// 错误日志 type:过滤类型logLevelFilter,将过滤error日志写进指定文件
 		errorLog: {
 			type: 'file',
-			filename: './log/error.log'.fullname()
+			filename: './log/error.log'.fullname(),
 		},
 		error: {
 			type: "logLevelFilter",
-			level: "error",
+			level: "warn",
 			appender: 'errorLog'
 		}
 	},
@@ -120,6 +121,16 @@ Log.prototype.error = function(tag, ...arg) {
 Log.prototype.success = function(tag, ...arg) {
 	console.log(tag.green, ...arg);
 	this.logger.debug(tag, ...arg);
+};
+
+
+/**
+ * @description http日志输出
+ * @param {String} tag 日志标签
+ * @param {Object} arg 其他要输出的信息
+ */
+Log.prototype.http = function(tag, ...arg) {
+	this.httpLogger.info(tag, ...arg);
 };
 
 $.log = new Log();
