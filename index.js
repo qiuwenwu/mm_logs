@@ -28,9 +28,9 @@ log4js.configure({
 		// http请求日志  http请求日志需要app.use引用一下， 这样才会自动记录每次的请求信息 
 		httpLog: {
 			type: "dateFile",
-			filename: "./log/http".fullname(),
+			filename: "./log/http",
 			alwaysIncludePattern: true,
-			pattern: "yyyy-MM-dd-hh.log",
+			pattern: "yyyy-MM-dd.log",
 			keepFileExt: true
 		},
 		// 错误日志 type:过滤类型logLevelFilter,将过滤error日志写进指定文件
