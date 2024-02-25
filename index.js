@@ -22,7 +22,7 @@ log4js.configure({
 			type: 'file',
 			filename: './log/output.log'.fullname(),
 			keepFileExt: true,
-			maxLogSize: 10485760,
+			maxLogSize: 3145728,
 			backups: 3
 		},
 		// http请求日志  http请求日志需要app.use引用一下， 这样才会自动记录每次的请求信息 
