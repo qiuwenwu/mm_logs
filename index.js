@@ -89,7 +89,7 @@ Log.prototype.debug = function(tag, ...arg) {
  * @param {Object} arg 其他要输出的信息
  */
 Log.prototype.info = function(tag, ...arg) {
-	console.log(tag.blue, ...arg);
+	console.info(tag.blue, ...arg);
 	this.logger.info(tag, ...arg);
 };
 
@@ -99,7 +99,7 @@ Log.prototype.info = function(tag, ...arg) {
  * @param {Object} arg 其他要输出的信息
  */
 Log.prototype.warn = function(tag, ...arg) {
-	console.log(tag.yellow, ...arg);
+	console.warn(tag.yellow, ...arg);
 	this.logger.warn(tag, ...arg);
 };
 
@@ -109,7 +109,7 @@ Log.prototype.warn = function(tag, ...arg) {
  * @param {Object} arg 其他要输出的信息
  */
 Log.prototype.error = function(tag, ...arg) {
-	console.log(tag.red, ...arg);
+	console.error(tag.red, ...arg);
 	this.logger.error(tag, ...arg);
 };
 
@@ -119,7 +119,7 @@ Log.prototype.error = function(tag, ...arg) {
  * @param {Object} arg 其他要输出的信息
  */
 Log.prototype.success = function(tag, ...arg) {
-	console.log(tag.green, ...arg);
+	console.success(tag.green, ...arg);
 	this.logger.debug(tag, ...arg);
 };
 
